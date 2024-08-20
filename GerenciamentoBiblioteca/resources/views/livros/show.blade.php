@@ -12,7 +12,7 @@
                 <h5>Gênero: <strong>{{ $livro->genero }}</strong></h5>
                 <p>Ano de lançamento: <strong>{{ $livro->ano }}</strong></p>
 
-                @if($livro->status === 'disponível')
+                @if($livro->status === 'Disponível')
                     <form method="POST" action="{{ route('emprestimo.add', $livro->id) }}">
                         @csrf
                         <button type="submit" class="btn btn-primary">Alugar livro</button>

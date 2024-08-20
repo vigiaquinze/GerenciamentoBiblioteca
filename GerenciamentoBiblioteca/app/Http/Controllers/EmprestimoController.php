@@ -24,7 +24,7 @@ class EmprestimoController extends Controller
         ]);
 
         // Atualiza o status do livro para 'emprestado'
-        $livro->update(['status' => 'emprestado']);
+        $livro->update(['status' => 'Alugado']);
 
         return redirect()->route('livros.show', $livro->id)
             ->with('success', 'Livro alugado com sucesso.');
