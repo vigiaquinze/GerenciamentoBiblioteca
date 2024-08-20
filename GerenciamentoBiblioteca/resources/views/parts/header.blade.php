@@ -1,7 +1,7 @@
 @if (Auth::check())
     @if (Auth::user()->isBibliotecario())
     <div>
-        <a href="/vagas">Acesse Dashboard de Livros</a>
+        <a href="/livros">Acesse Dashboard de Livros</a>
     </div>
     @endif
     <div>

@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Cadastro')
+
 @section('content')
 {{-- formulario --}}
 <div class="container">
@@ -29,13 +31,13 @@
         </div>
 
         <div class="form-group">
-            <label for="password">Senha</label>
-            <input type="password" name="password" class="form-control" required>
+            <label for="senha">Senha</label>
+            <input type="password" name="senha" class="form-control" required>
         </div>
 
         <div class="form-group">
-            <label for="password_confirmation">Confirme a Senha</label>
-            <input type="password" name="password_confirmation" class="form-control" required>
+            <label for="senha_confirmation">Confirme a Senha</label>
+            <input type="password" name="senha_confirmation" class="form-control" required>
         </div>
 
         <button type="submit" class="btn btn-primary">Registrar-se</button>

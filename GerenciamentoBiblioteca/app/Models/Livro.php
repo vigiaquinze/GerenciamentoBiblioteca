@@ -10,7 +10,7 @@ class Livro extends Model
     protected $table = 'livros';
 
     // Atributos que podem ser atribuídos em massa
-    protected $fillable = ['titulo', 'autor', 'genero', 'ano', 'status'];
+    protected $fillable = ['urlImg', 'titulo', 'autor', 'genero', 'ano', 'status'];
 
     // Relacionamentos
 

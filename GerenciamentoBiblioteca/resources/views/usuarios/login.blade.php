@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Login')
+
 @section('content')
 <div class="container">
     <h1>Login</h1>
@@ -23,8 +25,8 @@
         </div>
 
         <div class="form-group">
-            <label for="password">Senha</label>
-            <input type="password" name="password" class="form-control" required>
+            <label for="senha">Senha</label>
+            <input type="password" name="senha" class="form-control" required>
         </div>
 
         <button type="submit" class="btn btn-primary">Login</button>

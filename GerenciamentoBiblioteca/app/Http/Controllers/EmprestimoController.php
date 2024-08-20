@@ -9,13 +9,24 @@ use Illuminate\Support\Facades\Auth;
 
 class EmprestimoController extends Controller
 {
-    public function add(Request $request, Livro $livro){
+    public function add(Request $request, $livroId)
+    {
+        // Validação para garantir que o livro realmente existe
+        $livro = Livro::findOrFail($livroId);
+
+        // Cria um novo empréstimo
         $emprestimo = Emprestimo::create([
-            'usuario_id' => Auth::id(), 'vaga_id' => $livro->id
+            'usuario_id' => Auth::id(), // ID do usuário autenticado
+            'livro_id' => $livro->id, // ID do livro passado na rota
+            'data_emprestimo' => now()->toDateString(), // Data atual
+            'data_devolucao' => null, // Inicialmente nulo, se ainda não foi devolvido
+            'status' => 'ativo', // Status do empréstimo
         ]);
 
-        return redirect()->route('vagas.show', $emprestimo->id)
-        ->with('success', 'Emprestimo adicionado a vaga.');
-    }
+        // Atualiza o status do livro para 'emprestado'
+        $livro->update(['status' => 'emprestado']);
 
+        return redirect()->route('livros.show', $livro->id)
+            ->with('success', 'Livro alugado com sucesso.');
+    }
 }

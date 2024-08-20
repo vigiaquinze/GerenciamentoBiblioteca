@@ -21,7 +21,7 @@ class UsuarioController extends Controller
         // Validações para o login
         $credentials = $request->validate([
             'email' => ['required', 'email'],
-            'password' => ['required'],
+            'senha' => ['required'],
         ]);
 
         // Tenta autenticar com o guard 'usuario'
@@ -49,14 +49,14 @@ class UsuarioController extends Controller
         $request->validate([
             'nome' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:usuarios',
-            'password' => 'required|string|min:8|confirmed',
+            'senha' => 'required|string|min:8|confirmed',
         ]);
 
         // Cria um novo usuário
         $usuario = Usuario::create([
             'nome' => $request->nome,
             'email' => $request->email,
-            'password' => Hash::make($request->password),
+            'senha' => Hash::make($request->senha),
         ]);
 
         // Faz login automático do novo usuário
