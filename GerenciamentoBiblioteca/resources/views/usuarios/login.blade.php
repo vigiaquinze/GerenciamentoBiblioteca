@@ -25,8 +25,8 @@
         </div>
 
         <div class="form-group">
-            <label for="senha">Senha</label>
-            <input type="password" name="senha" class="form-control" required>
+            <label for="password">Senha</label>
+            <input type="password" name="password" class="form-control" required>
         </div>
 
         <button type="submit" class="btn btn-primary">Login</button>

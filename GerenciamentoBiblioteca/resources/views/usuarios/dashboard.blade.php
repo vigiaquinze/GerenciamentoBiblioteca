@@ -3,7 +3,7 @@
 @section('title', 'Dashboard')
 
 @section('content')
-    <h1>Dashboard de Livros</h1>
+    <h1 class="title">Dashboard de Livros</h1>
 
 
     <form method="GET" action="{{ route('dashboard') }}">

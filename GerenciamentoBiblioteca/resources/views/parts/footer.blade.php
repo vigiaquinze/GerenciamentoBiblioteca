@@ -1,7 +1,3 @@
-<div class="container-flex">
-    <br>
-    <hr>
-    <br>
-    este é o meu footer
-    <br><br>
-</div>
+<footer>
+    <h5>things are better if i stay</h5>
+</footer>

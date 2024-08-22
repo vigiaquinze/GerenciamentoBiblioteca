@@ -12,8 +12,8 @@ class CreateUsuariosTable extends Migration
             $table->id(); // ID auto-incremental
             $table->string('nome');
             $table->string('email')->unique();
-            $table->string('senha');
-            $table->enum('tipo',['usuario','bibliotecario'])->default('usuario'); // Campo 'tipo' só pode ter duas entradas: usuário ou bibliotecário
+            $table->string('password');
+            $table->enum('tipo',['usuario','bibliotecario']); // Campo 'tipo' só pode ter duas entradas: usuário ou bibliotecário
             $table->timestamps(); // Adiciona created_at e updated_at
         });
     }
