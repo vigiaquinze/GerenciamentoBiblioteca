@@ -9,9 +9,9 @@
                         <img src="\assets\img\img{{$index+1}}.png" class="d-block w-100" alt="{{ $livro->titulo }}">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>{{ $livro->titulo }}</h5>
-                            <h5>{{ $livro->autor }}<h5>
-                                    <p>{{ $livro->genero }}</p>
-                                    <p>Salário: R$ {{ $livro->ano }}</p>
+                            <h5><strong>Autor:</strong>{{ $livro->autor }}<h5>
+                                    <p><strong>Gênero:</strong>{{ $livro->genero }}</p>
+                                    <p><strong>Ano:</strong> {{ $livro->ano }}</p>
                         </div>
                     </div>
                 @endforeach
