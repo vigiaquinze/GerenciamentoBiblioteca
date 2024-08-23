@@ -2,7 +2,7 @@
 
 
 @section('content')
-<div class="container">
+<div class="container navBarMargin">
     <h1 class="title">Editar Livro</h1>
 
     @if ($errors->any())

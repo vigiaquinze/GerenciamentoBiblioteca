@@ -291,11 +291,13 @@ select:hover {
  }
 
  .presentation {
-    margin-top: 60px;
+    margin-top: 80px;
  }
 
  .bookInfo {
     display: flex;
+    top: 40px;
+    position: relative;
  }
 
  .bookInfo img {

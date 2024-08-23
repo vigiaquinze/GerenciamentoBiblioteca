@@ -69,7 +69,7 @@ class LivroController extends Controller
         $livro->update($dados);
 
         return redirect()->route('livros.index')
-            ->with('success', 'Livro Atualizada com sucesso.');
+            ->with('success', 'Livro atualizado com sucesso.');
     }
 
     /**
@@ -80,7 +80,7 @@ class LivroController extends Controller
         $livro->delete($livro);
 
         return redirect()->route('livros.index')
-            ->with('success', 'Livro Deletado com sucesso.');
+            ->with('success', 'Livro deletado com sucesso.');
     }
 
     public function show(Livro $livro){

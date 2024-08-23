@@ -8,7 +8,7 @@ use App\Models\Livro;
 class HomeController extends Controller
 {
     public function index(){
-        $livros = Livro::latest()->take(3)->get();
+        $livros = Livro::latest()->take(5)->get();
         return view('home',compact('livros'));
     }
 }

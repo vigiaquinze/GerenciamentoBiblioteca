@@ -3,7 +3,7 @@
 @section('title', 'Dashboard')
 
 @section('content')
-    <div class="container">
+    <div class="container navBarMargin">
         <h1 class="title">Dashboard de Livros</h1>
 
 
@@ -13,9 +13,9 @@
         </form>
 
 
-        <div>
+        <div class="row">
             @foreach ($livros as $livro)
-                <div class="card">
+                <div class="card m10">
                     <div class="cardTop">
                         <img src="{{ $livro->urlImg }}" class="cardImg" alt="{{ $livro->titulo }}">
                         <div class="cardBody">

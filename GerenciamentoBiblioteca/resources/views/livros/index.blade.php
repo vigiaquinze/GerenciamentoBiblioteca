@@ -2,7 +2,7 @@
 
 
 @section('content')
-    <div class="container">
+    <div class="container navBarMargin">
         <h1 class="title">Livros</h1>
 
         @if ($message = Session::get('success'))

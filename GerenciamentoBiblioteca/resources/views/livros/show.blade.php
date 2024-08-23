@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+    <div class="container navBarMargin">
         <div class="bookInfo">
             <div class="col-md-6">
                 <img src="{{ $livro->urlImg }}" class="img-fluid" alt="{{ $livro->titulo }}" width="300px">

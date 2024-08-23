@@ -17,7 +17,9 @@
             </form>
         </div>
         <div class="navbarLogo">
-            <h1>libriloco</h1>
+            <a href="{{ route('home') }}">
+                <h1>libriloco</h1>
+            </a>
         </div>
     </nav>
 @else
@@ -27,7 +29,9 @@
             <a href="/registro"><button class="navbarButton m10">Registrar-se</button></a>
         </div>
         <div class="navbarLogoNoAuth">
-            <h1>libriloco</h1>
+            <a href="{{ route('home') }}">
+                <h1>libriloco</h1>
+            </a>
         </div>
     </nav>
 @endif
