@@ -50,6 +50,7 @@ class UsuarioController extends Controller
             'nome' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:usuarios',
             'password' => 'required|string|min:8|confirmed',
+            'tipo' => 'required|string|in:usuario,bibliotecario',
         ]);
 
         // Cria um novo usuário
@@ -57,6 +58,7 @@ class UsuarioController extends Controller
             'nome' => $request->nome,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'tipo' => $request->tipo,
         ]);
 
         // Faz login automático do novo usuário

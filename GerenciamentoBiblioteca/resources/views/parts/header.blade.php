@@ -3,16 +3,16 @@
         <div>
             <h3 class="m5">Olá, {{ Auth::user()->nome }}</h3>
         </div>
-        <div>
+        <div class="flex">
+            @if (Auth::user()->isBibliotecario())
+                <div>
+                    <a href="/livros"><button class="navbarButton m5">Acessar dashboard de livros</button></a>
+                </div>
+            @endif
             <form action="/logout" method="post">
                 @csrf
                 <div class="flex">
                     <button class="navbarButton m5" type="submit">Sair</button>
-                    @if (Auth::user()->isBibliotecario())
-                        <div>
-                            <a href="/livros"><button class="navbarButton m5">Acessar dashboard de livros</button></a>
-                        </div>
-                    @endif
                 </div>
             </form>
         </div>
