@@ -2,28 +2,26 @@
 
 @section('content')
     <div class="container">
-        <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                @foreach ($livros as $index => $livro)
-                    <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
-                        <img src="\assets\img\img{{$index+1}}.png" class="d-block w-100" alt="{{ $livro->titulo }}">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>{{ $livro->titulo }}</h5>
-                            <h5><strong>Autor:</strong>{{ $livro->autor }}<h5>
-                                    <p><strong>Gênero:</strong>{{ $livro->genero }}</p>
-                                    <p><strong>Ano:</strong> {{ $livro->ano }}</p>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+        <div class="marquee" data-bs-ride="carousel">
+            <marquee behavior="behavior" direction="right" truespeed="320ms" scrolldelay="18" scrollamount="20">libriloco libriloco libriloco libriloco libriloco libriloco libriloco libriloco</marquee>
         </div>
+    </div>
+    <h1 class="title">Livros disponíveis</h1>
+    <div class="row">
+        @foreach ($livros as $livro)
+            <div class="card m10">
+                <div class="cardTop">
+                    <img src="{{ $livro->urlImg }}" class="cardImg" alt="{{ $livro->titulo }}">
+                    <div class="cardBody">
+                        <h3 class="cardTitle title">{{ $livro->titulo }}</h3>
+                        <h5 class="cardText">{{ $livro->autor }}</h5>
+                        <br>
+                        <p class="cardText">Gênero: <strong>{{ $livro->genero }}</strong></p>
+                        <p class="cardText">Lançamento: <strong>{{ $livro->ano }}</strong></p>
+                        <a href="{{ route('livros.show', $livro->id) }}" class="cardButton">Ver livro</a>
+                    </div>
+                </div>
+            </div>
+        @endforeach
     </div>
 @endsection

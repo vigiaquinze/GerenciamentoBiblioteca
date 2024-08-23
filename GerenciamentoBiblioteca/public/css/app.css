@@ -8,6 +8,8 @@ body {
 
 a {
     text-decoration: none;
+    color: #fff;
+    font-weight: 600;
 }
 
 .white {
@@ -29,10 +31,26 @@ a {
 
 .navbar {
     background-color: #000000a2;
-    backdrop-filter: blur(30px);
-    margin: 0px auto;
-    padding: 10px;
+    backdrop-filter: blur(15px);
+    margin: -21px 0px;
+    padding: 10px 10px 20px 10px;
     color: #fff;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    border-bottom: 1px solid #ffffff27;
+}
+
+.navbarNoAuth {
+    background-color: #000000a2;
+    backdrop-filter: blur(15px);
+    margin: 30px 0px;
+    padding: 10px 10px 20px 10px;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    border-bottom: 1px solid #ffffff27;
 }
 
 .navbarButton {
@@ -85,7 +103,9 @@ footer {
 }
 
 .container {
-    margin: 15px;
+    margin: 0px 50px;
+    top: 60px;
+    position: relative;
 }
 
 button {
@@ -114,6 +134,7 @@ input {
     color: #fff;
     border-radius: 15px;
     transition: 312ms ease-out;
+    width: 60%;
 }
 
 input:hover {
@@ -121,3 +142,166 @@ input:hover {
     color: #000000;
     transition: 312ms ease-out;
 }
+
+tr {
+    border-bottom: 1px solid #ffffff27;
+    padding: 20px;
+    width: 17%;
+}
+
+th {
+    border-bottom: 1px solid #ffffff27;
+    padding: 20px;
+    width: 17%;
+    font-weight: 900;
+}
+
+td {
+    border-bottom: 1px solid #ffffff27;
+    padding: 20px;
+    width: 17%;
+    text-align: center;
+}
+
+.formGroups {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 50%;
+}
+
+.formGroup {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 5px;
+}
+
+.tabButtons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.table {
+    border-top: 1px solid #ffffff27;
+    margin-top: 20px;
+}
+
+marquee {
+    display: flex;
+    font-family: "DM Serif Display", sans-serif;
+    font-size: 30vh;
+    background-color: #000000;
+    width: 120.6%;
+    margin-top: -30px;
+    margin-left: -102px;
+    position: relative;
+    transition: color 312ms ease-out;
+    margin-bottom: 60px;
+    margin-right: -120px;
+}
+
+marquee:hover {
+    color: #ffffff80;
+    transition: color 312ms ease-in;
+}
+
+.cardTop {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardTop img {
+    width: 80%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 210px;
+    border: 1px solid #ffffff62;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 40px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: #D284BE;
+    color: #000;
+    margin-top: 20px;
+}
+
+.cardBody {
+}
+
+.cardTitle {
+    font-size: 30px;
+    margin-bottom: 1px;
+}
+
+
+.cardButton {
+    font-family: "DM Sans", sans-serif;
+    background-color: #00000000;
+    border: 1px solid #000000;
+    padding: 5px 10px;
+    font-size: 15px;
+    color: #000000;
+    border-radius: 15px;
+    transition: 312ms ease-out;
+}
+
+.cardButton:hover {
+    background-color: #000000;
+    color: #D284BE;
+    transition: 312ms ease-out;
+}
+
+.navBarMargin {
+    margin-top: -51px;
+    position: relative;
+    top: 90px;
+}
+
+
+select {
+    font-family: "DM Sans", sans-serif;
+    background-color: #00000052;
+    border: 1px solid #fff;
+    padding: 5px 10px;
+    font-size: 15px;
+    color: #fff;
+    border-radius: 15px;
+    transition: 312ms ease-out;
+    width: 62.5%;
+}
+
+select:hover {
+    background-color: #fff;
+    color: #000000;
+    transition: 312ms ease-out;
+}
+
+.row
+ {
+    display: flex;
+ }
+
+ .presentation {
+    margin-top: 60px;
+ }
+
+ .bookInfo {
+    display: flex;
+ }
+
+ .bookInfo img {
+    margin-right: 30px;
+ }
+
+ button {
+    cursor: pointer;
+ }

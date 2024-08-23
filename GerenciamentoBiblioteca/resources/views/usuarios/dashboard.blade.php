@@ -3,30 +3,31 @@
 @section('title', 'Dashboard')
 
 @section('content')
-    <h1 class="title">Dashboard de Livros</h1>
+    <div class="container">
+        <h1 class="title">Dashboard de Livros</h1>
 
 
-    <form method="GET" action="{{ route('dashboard') }}">
-        <input type="text" name="search" placeholder="Pesquisar livros..." value="{{ request('search') }}">
-        <button type="submit">Pesquisar</button>
-    </form>
+        <form method="GET" action="{{ route('dashboard') }}">
+            <input type="text" name="search" placeholder="Pesquisar livros..." value="{{ request('search') }}">
+            <button type="submit">Pesquisar</button>
+        </form>
 
 
-    <div class="row">
-        @foreach ($livros as $livro)
-            <div class="col-md-4">
+        <div>
+            @foreach ($livros as $livro)
                 <div class="card">
-                    <img src="{{ $livro->urlImg }}" class="card-img-top" alt="{{ $livro->titulo }}">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ $livro->titulo }}</h5>
-                        <h5 class="card-title">{{ $livro->autor }}</h5>
-                        <p class="card-text">{{ $livro->genero }}</p>
-                        <p class="card-text">{{ $livro->ano }}</p>
-                        <a href="{{ route('livros.show', $livro->id) }}" class="btn btn-primary">Ver livro</a>
+                    <div class="cardTop">
+                        <img src="{{ $livro->urlImg }}" class="cardImg" alt="{{ $livro->titulo }}">
+                        <div class="cardBody">
+                            <h5 class="cardTitle title">{{ $livro->titulo }}</h5>
+                            <h5 class="cardText">{{ $livro->autor }}</h5>
+                            <p class="cardText">Gênero: <strong>{{ $livro->genero }}</strong></p>
+                            <p class="cardText">Lançamento: <strong>{{ $livro->ano }}</strong></p>
+                            <a href="{{ route('livros.show', $livro->id) }}" class="cardButton">Ver livro</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        @endforeach
+            @endforeach
+        </div>
     </div>
 @endsection
-
